@@ -88,7 +88,7 @@ const TodoDetailsModal: React.FC<TodoDetailsModalProps> = ({
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-lg shadow-xl max-w-lg w-full max-h-[90vh] flex flex-col">
-        {/* Header */}
+        
         <div className="flex items-center justify-between p-6 border-b">
           <h3 className="text-lg font-semibold text-gray-900">Task Details</h3>
           <button
@@ -99,10 +99,10 @@ const TodoDetailsModal: React.FC<TodoDetailsModalProps> = ({
           </button>
         </div>
 
-        {/* Scrollable Content */}
+        
         <div className="overflow-y-auto p-6 flex-1">
           <div className="space-y-4">
-            {/* Title and Status */}
+            
             <div className="flex items-start justify-between">
               <h2 className="text-xl font-bold text-gray-900 flex-1 break-words">
                 {todo.title}
@@ -116,7 +116,7 @@ const TodoDetailsModal: React.FC<TodoDetailsModalProps> = ({
               </span>
             </div>
 
-            {/* Description */}
+            
             <div>
               <h4 className="text-sm font-medium text-gray-700 mb-2">
                 Description
@@ -128,7 +128,7 @@ const TodoDetailsModal: React.FC<TodoDetailsModalProps> = ({
               </div>
             </div>
 
-            {/* Due Date */}
+           
             {todo.dueDate && (
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-2">
@@ -155,7 +155,7 @@ const TodoDetailsModal: React.FC<TodoDetailsModalProps> = ({
               </div>
             )}
 
-            {/* Timestamps */}
+           
             <div className="grid grid-cols-2 gap-4 text-sm text-gray-500">
               <div>
                 <span className="font-medium">Created:</span>
@@ -171,7 +171,7 @@ const TodoDetailsModal: React.FC<TodoDetailsModalProps> = ({
               )}
             </div>
 
-            {/* Move Actions */}
+            
             {getAvailableStatuses().length > 0 && (
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-2">
@@ -194,7 +194,7 @@ const TodoDetailsModal: React.FC<TodoDetailsModalProps> = ({
           </div>
         </div>
 
-        {/* Fixed Footer */}
+        
         <div className="p-4 border-t">
           <div className="flex gap-3">
             <button

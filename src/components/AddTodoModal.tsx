@@ -38,7 +38,7 @@ const AddTodoModal: React.FC<AddTodoModalProps> = ({ isOpen, onClose, onAddTodo 
     onClose()
   }
 
-  // Set minimum datetime to current time
+
   const now = new Date()
   const minDateTime = now.toISOString().slice(0, 16)
 

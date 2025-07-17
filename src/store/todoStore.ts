@@ -1,7 +1,7 @@
 import { Toast, Todo } from "@/types/Todo"
 import { create } from "zustand"
 import { devtools, persist } from "zustand/middleware"
-// import type { Todo, Toast } from "../types/Todo"
+
 
 interface TodoState {
   todos: Todo[]
@@ -19,7 +19,6 @@ interface TodoActions {
   clearToasts: () => void
 }
 
-// Custom serializer for Date objects
 const customStorage = {
   getItem: (name: string) => {
     const str = localStorage.getItem(name)
@@ -27,11 +26,11 @@ const customStorage = {
 
     try {
       const parsed = JSON.parse(str)
-      // Convert date strings back to Date objects for todos
+      
       if (parsed.state?.todos) {
         parsed.state.todos = parsed.state.todos.map((todo: any) => ({
           ...todo,
-          createdAt: todo.createdAt ? new Date(todo.createdAt) : new Date(), // Ensure createdAt is always a Date
+          createdAt: todo.createdAt ? new Date(todo.createdAt) : new Date(), 
           dueDate: todo.dueDate ? new Date(todo.dueDate) : undefined,
           completedAt: todo.completedAt ? new Date(todo.completedAt) : undefined,
         }))
@@ -150,7 +149,7 @@ export const useTodoStore = create<TodoState & TodoActions>()(
           }
         },
 
-        // Actions for Toasts
+        
         addToast: (toast) => {
           const id = Date.now().toString()
           const newToast: Toast = { ...toast, id }

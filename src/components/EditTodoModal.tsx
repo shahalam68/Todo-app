@@ -43,7 +43,6 @@ const EditTodoModal: React.FC<EditTodoModalProps> = ({ isOpen, onClose, todo, on
         description: formData.description,
         dueDate: formData.dueDate ? new Date(formData.dueDate) : undefined,
       })
-      // onClose is called by onUpdateTodo in KanbanBoard
     }
   }
 
@@ -52,7 +51,6 @@ const EditTodoModal: React.FC<EditTodoModalProps> = ({ isOpen, onClose, todo, on
     onClose()
   }
 
-  // Set minimum datetime to current time
   const now = new Date()
   const minDateTime = now.toISOString().slice(0, 16)
 

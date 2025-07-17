@@ -2,7 +2,7 @@
 import type React from "react"
 import { AlertTriangle, X, Trash2 } from "lucide-react"
 import { Todo } from "@/types/Todo"
-// import type { Todo } from "../types/Todo"
+
 
 interface DeleteConfirmModalProps {
   isOpen: boolean

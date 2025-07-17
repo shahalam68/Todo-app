@@ -159,10 +159,12 @@ export default function KanbanTodo(): React.JSX.Element {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#d2f8e2] via-[#fdf6e3] to-[#fbe3d9] p-4">
+    <div className="min-h-screen bg-gradient-to-b from-[#f0f6ff] via-[#fff9f4] to-[#f3fef6] p-4">
+
+
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 text-center">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
             Kanban Todo Board
           </h1>
           <p className="text-gray-700 text-lg">Manage your tasks across different stages</p>
@@ -171,7 +173,7 @@ export default function KanbanTodo(): React.JSX.Element {
           </p>
         </div>
 
-        {/* Overdue Alerts */}
+        
         {overdueAlerts.length > 0 && (
           <div className="mb-6 space-y-2">
             {overdueAlerts.map((todoId) => {
@@ -200,7 +202,7 @@ export default function KanbanTodo(): React.JSX.Element {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* New Column */}
+          
           <KanbanColumn
             title="New"
             status="new"
@@ -216,7 +218,7 @@ export default function KanbanTodo(): React.JSX.Element {
             showAddButton={true}
           />
 
-          {/* Ongoing Column */}
+          
           <KanbanColumn
             title="Ongoing"
             status="Ongoing"
@@ -232,7 +234,7 @@ export default function KanbanTodo(): React.JSX.Element {
             showDueDate={true}
           />
 
-          {/* Done Column */}
+         
           <KanbanColumn
             title="Done"
             status="Done"
@@ -247,7 +249,7 @@ export default function KanbanTodo(): React.JSX.Element {
           />
         </div>
 
-        {/* Modals */}
+        
         <AddTodoModal isOpen={isAddDialogOpen} onClose={() => setIsAddDialogOpen(false)} onAddTodo={handleAddTodo} />
         <EditTodoModal
           isOpen={isEditDialogOpen}
@@ -270,7 +272,7 @@ export default function KanbanTodo(): React.JSX.Element {
           onMoveTodo={handleMoveTodo}
         />
 
-        {/* Context Menu */}
+       
         {contextMenu && (
           <ContextMenuComponent
             contextMenu={contextMenu}
